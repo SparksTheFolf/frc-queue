@@ -31,24 +31,24 @@
         <li class="nav-item">
           <a class="nav-link active" href="/schedule">Schedule</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            More
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">Donate</a></li>
-            <li><a class="dropdown-item" href="#">Pricing</a></li>
-            <li><a class="dropdown-item" href="#">About</a></li>
-          </ul>
-      </ul>
+        <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" id="menu1" type="button" data-toggle="dropdown">Dropdown Example
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">HTML</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">CSS</a></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">JavaScript</a></li>
+      <li role="presentation" class="divider"></li>
+      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">About Us</a></li>    
+    </ul>
+  </div><br>
+        </ul>
     </div>
   </div>
+  </nav>
 
-  <script>
-$(document).ready(function(){
-  $(".dropdown-toggle").dropdown("toggle");
-});
-</script>
+  
+
 <?php
 
 
@@ -79,6 +79,10 @@ echo $response;
 ?>
 
 
-</nav>
+<script>
+$(document).ready(function(){
+  $(".dropdown-toggle").dropdown("toggle");
+});
+</script>
 </body>
 </html>
