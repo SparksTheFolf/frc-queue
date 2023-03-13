@@ -3,6 +3,7 @@
 <head>
 <title>FRC Queue</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" crossorigin="anonymous">
 
 </head>
 <body>
@@ -16,22 +17,30 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Queuing</a>
+          <a class="nav-link active" href="/queue">Queuing</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">Alliances</a>
+          <a class="nav-link active" href="/alliance">Alliances</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">Match Results</a>
+          <a class="nav-link active" href="/matchResults">Match Results</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">Schedule</a>
+          <a class="nav-link active" href="/schedule">Schedule</a>
         </li>
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          About
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/pricing">Pricing</a>
+          <a class="dropdown-item" href="/about">About the Project</a>
+        </div>
+      </li>
       </ul>
     </div>
   </div>
 </nav>
-
 
 
 </body>
