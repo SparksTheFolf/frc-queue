@@ -44,7 +44,10 @@
     </div>
   </div>
 
+  <script>
+  $('.dropdown-toggle').dropdown();
 
+  </script>
 <?php
 
 
@@ -70,31 +73,8 @@ curl_setopt_array($curl, array(
 $response = curl_exec($curl);
 
 curl_close($curl);
+echo $response;
 
-$final = json_decode($response,true);
-
-$output = "<ul>";
-
-foreach($final['Schedule'] as $Schedule){
-
-	$output.="<h3>".$Schedule['description']."</h3>";
-	$output.="<h5>".'Start Time: '.$Schedule['startTime']."</h5>";
-
-	foreach($Schedule['teams'] as $teams){
-
-
-	$output.="<li>".'Teams: '.$teams['teamNumber']."</li>";
-	$output.="<li>".'Station: '.$teams['station']."</li>";
-	
-	
-
-	}
-
-}
-
-$ouput = "</ul>";
-
-echo $output;
 ?>
 
 
