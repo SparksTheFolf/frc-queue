@@ -32,28 +32,72 @@
           <a class="nav-link active" href="/schedule">Schedule</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            About
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            More
           </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/pricing">Pricing</a>
-          <a class="dropdown-item" href="/about">About the Project</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Donate</a></li>
+            <li><a class="dropdown-item" href="#">Pricing</a></li>
+            <li><a class="dropdown-item" href="#">About</a></li>
           </ul>
-        </li>s
       </ul>
     </div>
   </div>
+
+
+<?php
+
+
+$frcCode = getenv('HTTP_frcBASIC');
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://frc-api.firstinspires.org/v3.0/2023/events?weekNumber=2',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'GET',
+  CURLOPT_HTTPHEADER => array(
+    'If-Modified-Since: ',
+    'Authorization: Basic '.$frcCode
+  ),
+));
+
+$response = curl_exec($curl);
+
+curl_close($curl);
+
+$final = json_decode($response,true);
+
+$output = "<ul>";
+
+foreach($final['Schedule'] as $Schedule){
+
+	$output.="<h3>".$Schedule['description']."</h3>";
+	$output.="<h5>".'Start Time: '.$Schedule['startTime']."</h5>";
+
+	foreach($Schedule['teams'] as $teams){
+
+
+	$output.="<li>".'Teams: '.$teams['teamNumber']."</li>";
+	$output.="<li>".'Station: '.$teams['station']."</li>";
+	
+	
+
+	}
+
+}
+
+$ouput = "</ul>";
+
+echo $output;
+?>
+
+
 </nav>
 </body>
 </html>
