@@ -20,13 +20,13 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" href="/queue">Queuing</a>
+          <a class="nav-link disabled" href="/queue">Queuing</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="/alliance">Alliances</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/matchResults">Match Results</a>
+          <a class="nav-link disabled" href="/matchResults">Match Results</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="/schedule">Schedule</a>
