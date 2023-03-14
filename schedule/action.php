@@ -42,6 +42,11 @@ foreach($final['Schedule'] as $Schedule){
 
 	foreach($Schedule['teams'] as $teams){
 
+  $output.='<button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample"> Info </button>';
+
+  $output.='<div class="collapse" id="collapseExample">';
+  $output.='<div class="card card-body">';
+
 
 	$output.="<li>".'Teams: '.$teams['teamNumber']."</li>";
 	$output.="<li>".'Station: '.$teams['station']."</li>";
@@ -51,6 +56,8 @@ foreach($final['Schedule'] as $Schedule){
 	}
 
 }
+
+$output.="<br>";
 
 $output.="</ul>";
 
