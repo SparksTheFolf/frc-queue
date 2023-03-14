@@ -18,7 +18,7 @@ curl_setopt_array($curl, array(
   CURLOPT_CUSTOMREQUEST => 'GET',
   CURLOPT_HTTPHEADER => array(
     'If-Modified-Since: ',
-    'Authorization: Basic '.$frcCode
+    'Authorization: Basic '
   ),
 ));
 
@@ -26,6 +26,8 @@ $response = curl_exec($curl);
 
 curl_close($curl);
 echo $response;
+
+echo $frcCode;
 
 ?>
 
