@@ -8,7 +8,7 @@ $frcCode = getenv('frcBASIC');
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://frc-api.firstinspires.org/v3.0/2023/schedule/caoc?tournamentLevel=qual&teamNumber=4984&start=&end=',
+  CURLOPT_URL => 'https://frc-api.firstinspires.org/v3.0/2023/schedule/caoc?tournamentLevel=qual&teamNumber=4984',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,
@@ -18,7 +18,7 @@ curl_setopt_array($curl, array(
   CURLOPT_CUSTOMREQUEST => 'GET',
   CURLOPT_HTTPHEADER => array(
     'If-Modified-Since: ',
-    'Authorization: Basic '
+    'Authorization: Basic bm9sYW50MTA4OjY3REEyNkU4LUVDRDItNDczRi1CREE1LUFBOTA0MTZFNjk4Mg=='
   ),
 ));
 
