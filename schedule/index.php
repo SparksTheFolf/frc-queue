@@ -20,6 +20,7 @@
     <label for="exampleInputEmail1">Event Code</label>
     <input name="code" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter 4 or 5 char code.">
   </div>
+  <br>
   <div class="form-group">
     <label for="exampleFormControlSelect2">Choose Level</label>
     <select name="level" multiple class="form-control" id="exampleFormControlSelect2">
@@ -27,6 +28,7 @@
       <option>playoff</option>
     </select>
   </div>
+  <br>
   <div class="form-group">
     <label for="exampleInputEmail1">Team Number</label>
     <input name="number" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Team Number.">
