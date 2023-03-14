@@ -9,6 +9,12 @@
       Go Back
     </button>  
 
+    <script>
+$(document).ready(function(){
+  $(".dropdown-toggle").dropdown("toggle");
+});
+</script>
+
 <?php
 
 
@@ -61,16 +67,10 @@ foreach($final['Schedule'] as $Schedule){
 
 $ouput = "</ul>";
 
-echo $output;
-
 ?>
 
 
-<script>
-$(document).ready(function(){
-  $(".dropdown-toggle").dropdown("toggle");
-});
-</script>
+
 
 
 </body>
