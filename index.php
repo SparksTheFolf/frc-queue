@@ -36,10 +36,10 @@
           More
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Support</a>
-          <a class="dropdown-item" href="#">Pricing</a>
+          <a class="dropdown-item" href="/support">Support</a>
+          <a class="dropdown-item" href="/pricing">Pricing</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="/About">About The Project</a>
+          <a class="dropdown-item" href="/about">About The Project</a>
         </div>
       </li>
         </ul>
