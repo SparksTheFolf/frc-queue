@@ -68,5 +68,12 @@ echo $output;
 
 </div>
 
+<script>
+$(document).ready(function(){
+  $(".dropdown-toggle").dropdown("toggle");
+});
+</script>
+
+
 </body>
 </html>

@@ -28,8 +28,13 @@
 	<br/>
         <input type="submit" value="submit" >
     </form>
-</body>
-</html>
+
+    <script>
+$(document).ready(function(){
+  $(".dropdown-toggle").dropdown("toggle");
+});
+</script>
+
 
 </body>
 </html>
