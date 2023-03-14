@@ -29,6 +29,26 @@
         <input type="submit" value="submit" >
     </form>
 
+
+    <form method="" action="action.php">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Event Code</label>
+    <input name="code" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Event Code">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlSelect2">Example multiple select</label>
+    <select name="level" multiple class="form-control" id="exampleFormControlSelect2">
+      <option>qual</option>
+      <option>playoff</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Team Number</label>
+    <input name="number" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Team Number">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
     <script>
 $(document).ready(function(){
   $(".dropdown-toggle").dropdown("toggle");

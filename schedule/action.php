@@ -7,9 +7,7 @@
 
     <button onclick="window.location.href='/schedule';">
       Go Back
-    </button>
-
-<div name="main" id="main">
+    </button>  
 
 <?php
 
@@ -64,9 +62,9 @@ foreach($final['Schedule'] as $Schedule){
 $ouput = "</ul>";
 
 echo $output;
+
 ?>
 
-</div>
 
 <script>
 $(document).ready(function(){
