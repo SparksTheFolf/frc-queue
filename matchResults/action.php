@@ -7,12 +7,10 @@ $code= $_GET['code'];
 $level= $_GET['level'];
 $match= $_GET['match'];
 
-
-
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://frc-api.firstinspires.org/v3.0/2023/scores/'.$code.'/'.$level'?matchNumber='.$match,
+  CURLOPT_URL => 'https://frc-api.firstinspires.org/v3.0/2023/scores/'.$code.'/'.$level.'?matchNumber='.$match,
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,
@@ -37,7 +35,6 @@ $output.="<ul>";
 foreach($final['MatchScores'] as $MatchScores){
 
 	$output.="<h3>".$MatchScores['matchLevel'].": ".$MatchScores['matchNumber']."</h3>";
-  $output.="<li>".$MatchScores['alliances']."</li>";
 
 
 }
