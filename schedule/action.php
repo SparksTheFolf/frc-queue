@@ -4,11 +4,16 @@
 <?php
 
 
+$number= $_GET['number'];
+$code= $_GET['code'];
+$level= $_GET['level'];
+
+
 
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://frc-api.firstinspires.org/v3.0/2023/schedule/caoc?tournamentLevel=qual&teamNumber=4984',
+  CURLOPT_URL => 'https://frc-api.firstinspires.org/v3.0/2023/schedule/'.$code.'?tournamentLevel='.$level.'&teamNumber='.$number,
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,
@@ -25,9 +30,25 @@ curl_setopt_array($curl, array(
 $response = curl_exec($curl);
 
 curl_close($curl);
-echo $response;
 
-echo getenv("frcBASIC");
+$final = json_decode($response);
+
+foreach($final['Schedule'] as $Schedule){
+
+	$output.="<h3>".$Schedule['description']."</h3>";
+	$output.="<h5>".'Start Time: '.$Schedule['startTime']."</h5>";
+
+	foreach($Schedule['teams'] as $teams){
+
+
+	$output.="<li>".'Teams: '.$teams['teamNumber']."</li>";
+	$output.="<li>".'Station: '.$teams['station']."</li>";
+	
+	
+
+	}
+
+}
 
 ?>
 
