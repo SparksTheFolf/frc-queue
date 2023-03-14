@@ -31,7 +31,7 @@
   <br>
   <div class="form-group">
     <label for="exampleInputEmail1">Match number</label>
-    <input name="code" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter match number.">
+    <input name="match" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter match number.">
   </div>
   <br>
   <button type="submit" class="btn btn-primary">Submit</button>
