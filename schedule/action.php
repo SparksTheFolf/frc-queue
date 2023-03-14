@@ -3,6 +3,8 @@
 
 <?php
 
+
+
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
@@ -16,7 +18,7 @@ curl_setopt_array($curl, array(
   CURLOPT_CUSTOMREQUEST => 'GET',
   CURLOPT_HTTPHEADER => array(
     'If-Modified-Since: ',
-    'Authorization: Basic '.getenv("frcBASIC")
+    'Authorization: Basic bm9sYW50MTA4OjY3REEyNkU4LUVDRDItNDczRi1CREE1LUFBOTA0MTZFNjk4Mg=='
   ),
 ));
 
@@ -25,7 +27,7 @@ $response = curl_exec($curl);
 curl_close($curl);
 echo $response;
 
-echo $frcCode;
+echo getenv("frcBASIC");
 
 ?>
 
