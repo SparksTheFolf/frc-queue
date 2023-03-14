@@ -65,14 +65,11 @@ foreach($final['Schedule'] as $Schedule){
 
 $output.="</ul>";
 
+echo $output; 
 
 ?>
 
 <br>
-
-<?php echo $output; ?>
-
-<br><br>
 <a href="/schedule" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Go Back</a>
 
 
@@ -80,8 +77,9 @@ $output.="</ul>";
 $(document).ready(function(){
   $(".dropdown-toggle").dropdown("toggle");
 });
-
-
 </script>
+
+
+
 </body>
 </html>
