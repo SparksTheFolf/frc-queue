@@ -18,7 +18,7 @@
 $number= $_GET['number'];
 $code= $_GET['code'];
 $level= $_GET['level'];
-$frcCode = getenv('frcBASIC');
+$frcCode = $_ENV('frcBASIC');
 
 
 $curl = curl_init();
