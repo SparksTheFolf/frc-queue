@@ -31,7 +31,9 @@ $response = curl_exec($curl);
 
 curl_close($curl);
 
-$final = json_decode($response);
+$final = json_decode($response, true);
+
+$output.="<ul>";
 
 foreach($final['Schedule'] as $Schedule){
 
@@ -49,6 +51,10 @@ foreach($final['Schedule'] as $Schedule){
 	}
 
 }
+
+$output.="</ul>";
+
+echo $output;
 
 ?>
 
