@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<?php include 'Header.php'; ?>
+<?php include '../Header.php'; ?>
 
 
     <button onclick="window.location.href='/';">
