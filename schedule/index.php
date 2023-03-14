@@ -12,6 +12,10 @@
     <title>HTML Form</title>
 </head>
 <body>
+
+<?php include '../Header.php'; ?>
+
+
     <h1>HTML Form</h1>
     <form method="" action="action.php">
         Code: <input type="text" name="code"><br>
