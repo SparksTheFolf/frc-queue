@@ -12,12 +12,6 @@
       Go Back
     </button>  
 
-    <script>
-(document).ready(function(){
-  (".dropdown-toggle").dropdown("toggle");
-});
-</script>
-
 <?php
 
 
@@ -26,10 +20,11 @@ $code= $_GET['code'];
 $level= $_GET['level'];
 $frcCode = getenv('HTTP_frcBASIC');
 
+
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://frc-api.firstinspires.org/v3.0/2023/schedule/'.$code.'?tournamentLevel='.$level.'&teamNumber='.$number,
+  CURLOPT_URL => 'https://frc-api.firstinspires.org/v3.0/2023/schedule/caoc?tournamentLevel=qual&teamNumber=4984&start=&end=',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,
@@ -39,7 +34,7 @@ curl_setopt_array($curl, array(
   CURLOPT_CUSTOMREQUEST => 'GET',
   CURLOPT_HTTPHEADER => array(
     'If-Modified-Since: ',
-    'Authorization: Basic '.$frcCode
+    'Authorization: Basic bm9sYW50MTA4OjY3REEyNkU4LUVDRDItNDczRi1CREE1LUFBOTA0MTZFNjk4Mg=='
   ),
 ));
 
@@ -51,8 +46,12 @@ echo $response;
 ?>
 
 
+<script>
+$(document).ready(function(){
+  $(".dropdown-toggle").dropdown("toggle");
+});
 
 
-
+</script>
 </body>
 </html>
