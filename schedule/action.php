@@ -3,7 +3,7 @@
 
 <?php
 
-$frcCode = $_ENV('frcBASIC');
+$frcCode = getenv('frcBASIC');
 
 $curl = curl_init();
 
