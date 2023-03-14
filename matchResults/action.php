@@ -35,7 +35,23 @@ $output.="<ul>";
 foreach($final['MatchScores'] as $MatchScores){
 
 	$output.="<h3>".$MatchScores['matchLevel'].": ".$MatchScores['matchNumber']."</h3>";
-  $output.="<li>".$MatchScores['alliances']."</li>";
+  foreach($MatchScores['alliances'] as $alliances){
+
+    if ($alliances['alliance']['red']) {
+      echo '<div class="alert alert-danger" role="alert">';
+     
+    echo '</div>';
+  }
+
+  if ($alliances['alliance']['red']) {
+    echo '<div class="alert alert-info" role="alert">';
+     
+    echo '</div>';
+  }
+    
+    
+  
+    }
 
 }
 
