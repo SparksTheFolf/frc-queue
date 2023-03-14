@@ -55,7 +55,7 @@ echo $output;
 
 <br><br>
 
-<a href="/schedule" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Go Back</a>
+<a href="/alliance" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Go Back</a>
 
 
 <script>

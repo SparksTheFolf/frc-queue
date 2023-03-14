@@ -24,11 +24,7 @@
     Creator/About
   </div>
   <div class="card-body">
-    <h5 class="card-title">About Nolan Trapp</h5>
-    <p class="card-text">Nolan Trapp is the lead content and creative design director of this and many websites</p><br />
-    <p class="card-text">He has training and fluence in about 17 different programming languages | 10 short of the world record</p><br />
-    <p class="card-text">He belives that everything that people create and make should be in the public and fair use licence</p><br />
-    <p class="card-text">If you have any questions, please contact him at: sparks@wuffs.net</p><br />
+    <h5 class="card-title">About Nolan</h5>
     <a href="https://wuffs.net" class="btn btn-primary">His Website</a>
   </div>
 </div>
