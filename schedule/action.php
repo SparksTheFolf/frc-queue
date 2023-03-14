@@ -8,13 +8,13 @@
 <?php include '../Header.php'; ?>
 
 
-    <button onclick="window.location.href='/';">
+    <button onclick="window.location.href='/schedule';">
       Go Back
     </button>  
 
     <script>
-$(document).ready(function(){
-  $(".dropdown-toggle").dropdown("toggle");
+(document).ready(function(){
+  (".dropdown-toggle").dropdown("toggle");
 });
 </script>
 
