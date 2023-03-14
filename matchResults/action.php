@@ -35,7 +35,7 @@ $output.="<ul>";
 foreach($final['MatchScores'] as $MatchScores){
 
 	$output.="<h3>".$MatchScores['matchLevel'].": ".$MatchScores['matchNumber']."</h3>";
-
+  $output.="<li>".$MatchScores['alliances']."</li>";
 
 }
 
@@ -49,7 +49,7 @@ echo $output;
 
 <br><br>
 
-<a href="/schedule" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Go Back</a>
+<a href="/matchResults" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Go Back</a>
 
 
 <script>
