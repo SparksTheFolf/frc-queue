@@ -36,7 +36,7 @@ foreach($final['Alliances'] as $Alliances){
 	$output.="<h3>".$Alliances['name']."</h3>";
 
 
-	$output.="<li>".'Captian: '.$Alliances['teamNumber']."</li>";
+	$output.="<li>".'Captian: '.$Alliances['captain']."</li>";
 	$output.="<li>".'Team 2: '.$Alliances['round1']."</li>";
   $output.="<li>".'Team 3: '.$Alliances['round2']."</li>";
 	
