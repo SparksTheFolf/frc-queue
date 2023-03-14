@@ -18,7 +18,7 @@
 $number= $_GET['number'];
 $code= $_GET['code'];
 $level= $_GET['level'];
-$frcCode = getenv('HTTP_frcBASIC');
+$frcCode = getenv('frcBASIC');
 
 
 $curl = curl_init();
@@ -34,7 +34,7 @@ curl_setopt_array($curl, array(
   CURLOPT_CUSTOMREQUEST => 'GET',
   CURLOPT_HTTPHEADER => array(
     'If-Modified-Since: ',
-    'Authorization: Basic bm9sYW50MTA4OjY3REEyNkU4LUVDRDItNDczRi1CREE1LUFBOTA0MTZFNjk4Mg=='
+    'Authorization: Basic '.$frcBASIC
   ),
 ));
 
@@ -42,34 +42,11 @@ $response = curl_exec($curl);
 
 curl_close($curl);
 
-$final = json_decode($response);
-
-$output.="<ul>";
-
-foreach($final['Schedule'] as $Schedule){
-
-	$output.="<h3>".$Schedule['description']."</h3>";
-	$output.="<h5>".'Start Time: '.$Schedule['startTime']."</h5>";
-
-	foreach($Schedule['teams'] as $teams){
-
-
-	$output.="<li>".'Teams: '.$teams['teamNumber']."</li>";
-	$output.="<li>".'Station: '.$teams['station']."</li>";
-	
-	
-
-	}
-
-}
-
-$output.="</ul>";
-
-echo $output; 
-
 ?>
 
 <br>
+
+
 <a href="/schedule" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Go Back</a>
 
 
