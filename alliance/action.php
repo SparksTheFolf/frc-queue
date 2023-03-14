@@ -13,7 +13,7 @@ $level= $_GET['level'];
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://frc-api.firstinspires.org/v3.0/2023/schedule/'.$code.'?tournamentLevel='.$level.'&teamNumber='.$number,
+  CURLOPT_URL => 'https://frc-api.firstinspires.org/v3.0/2023/alliances/'.$code,
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,
@@ -35,17 +35,16 @@ $final = json_decode($response, true);
 
 $output.="<ul>";
 
-foreach($final['Schedule'] as $Schedule){
+foreach($final['Alliances'] as $Alliances){
 
-	$output.="<h3>".$Schedule['description']."</h3>";
-	$output.="<h5>".'Start Time: '.$Schedule['startTime']."</h5>";
+	$output.="<h3>".$Alliances['name']."</h3>";
 
-	foreach($Schedule['teams'] as $teams){
 
-	$output.="<li>".'Teams: '.$teams['teamNumber']."</li>";
-	$output.="<li>".'Station: '.$teams['station']."</li>";
+	$output.="<li>".'Captian: '.$Alliances['teamNumber']."</li>";
+	$output.="<li>".'Team 2: '.$Alliances['round1']."</li>";
+  $output.="<li>".'Team 3: '.$Alliances['round2']."</li>";
 	
-	
+	$output.="<br>";
 
 	}
 
