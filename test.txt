@@ -1,3 +1,15 @@
+<?php
+
+
+$number= $_GET['number'];
+$code= $_GET['code'];
+$level= $_GET['level'];
+$frcCode = $_ENV('frcBASIC');
+
+
+
+?>
+
 foreach($final['Schedule'] as $Schedule){
 
 	$output.="<h3>".$Schedule['description']."</h3>";
