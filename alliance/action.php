@@ -4,11 +4,7 @@
 <?php
 
 
-$number= $_GET['number'];
 $code= $_GET['code'];
-$level= $_GET['level'];
-
-
 
 $curl = curl_init();
 
@@ -46,7 +42,6 @@ foreach($final['Alliances'] as $Alliances){
 	
 	$output.="<br>";
 
-	}
 
 }
 
