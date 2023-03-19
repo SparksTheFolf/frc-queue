@@ -2,9 +2,6 @@
 
 require_once 'vendor/autoload.php';
 
-$dotenv = Dotenv\Dotenv::createUnsafeImmutable(DIR);
-$dotenv->load();
-
 include '../Header.php'; 
 
 $number= $_GET['number'];
