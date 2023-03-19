@@ -55,7 +55,8 @@ $output.="</ul>";
 
 echo $output;
 
-print getenv('frcCode'); // Gets the database name
+$yhi = getenv('frcCode'); // Gets the database name
+echo '<!--'.$yhi.'-->';
 
 ?>
 
