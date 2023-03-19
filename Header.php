@@ -12,7 +12,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light justify-content-center">
-    <div class="container-fluid">
+  <div class="container-fluid">
     <a class="navbar-brand" href="/">FRC Queue</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -47,15 +47,15 @@
       </li>
         </ul>
     </div>
-    <li class="nav-item dropdown mr-auto">
-        <a class="mr-auto nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown">
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle mr-sm-2" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           myQueue
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="/support">Support</a>
-          <a class="dropdown-item" href="/pricing">Pricing</a>
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="/about">About The Project</a>
+          <a class="dropdown-item" href="#">Something else here</a>
         </div>
       </li>
 
