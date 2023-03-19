@@ -46,20 +46,18 @@ $output.="<ul>";
 foreach($final['Events'] as $Events){
 
 	$output.="<h3>".$Events['name']."</h3>";
+  $output.="<h5>"."Event Code: ".$Events['code']."</h3>";
+  $output.="<li>".'Code Type: '.$Events['type']."</li>";
 	$output.="<li>".'Date Start: '.$Events['dateStart']."</li>";
 	$output.="<li>".'Date End: '.$Events['dateEnd']."</li>";
   $output.="<li>".'Location: '.$Events['venue']."</li>";
-	$output.="<li>".'Station: '.$Events['station']."</li>";
 
   foreach($Events['webcasts'] as $webcasts){
 
-    $output.="<li>".'Webcast (Program View): '.$webcasts."</li>";
-    $output.="<li>".'Webcast (Static View): '.$webcasts."</li>";
-    
-    
+    $output.="<li>".'Webcast: '.$webcasts."</li>";    
   
     }
-
+    $output.="<br>";
 }
 
 $output.="<br>";
