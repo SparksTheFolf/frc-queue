@@ -1,8 +1,11 @@
-<?php include '../Header.php'; ?> 
+<?php 
 
+require_once 'vendor/autoload.php';
 
-<?php
+$dotenv = Dotenv\Dotenv::createUnsafeImmutable(DIR);
+$dotenv->load();
 
+include '../Header.php'; 
 
 $number= $_GET['number'];
 $code= $_GET['code'];
@@ -57,7 +60,7 @@ $output.="</ul>";
 
 echo $output;
 
-$db = $_ENV('frcCode'); // Gets the database name
+$db = getenv('frcCode'); // Gets the database name
 echo "secret name: $db  \r\n"
 
 ?>
