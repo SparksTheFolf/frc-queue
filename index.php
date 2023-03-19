@@ -54,7 +54,7 @@ foreach($final['Events'] as $Events){
 
   foreach($Events['webcasts'] as $webcasts){
 
-    $output.="<li>".'Webcast: <a href='.$webcasts."' > Here </a> </li>";    
+    $output.="<li>".'Webcast: <a href='.$webcasts." > Here </a> </li>";    
   
     }
     $output.="<br>";
