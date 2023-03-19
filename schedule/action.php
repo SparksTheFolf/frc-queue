@@ -55,8 +55,8 @@ $output.="</ul>";
 
 echo $output;
 
-$yhi = getenv('frcCode'); // Gets the database name
-echo '<!--'.$yhi.'-->';
+#echo out the 'frcCode' value from the linux environment variable
+echo apache_getenv('FRCCODE');
 
 ?>
 
