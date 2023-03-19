@@ -22,7 +22,7 @@ $frcCode = getenv('FRCCODE');
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://frc-api.firstinspires.org/v3.0/2023/events?weekNumber=2',
+  CURLOPT_URL => 'https://frc-api.firstinspires.org/v3.0/2023/events?weekNumber=3&tournamentType=Regional',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,
@@ -38,9 +38,36 @@ curl_setopt_array($curl, array(
 
 $response = curl_exec($curl);
 
-curl_close($curl);
-$final = json_decode($response,true);
-echo $final;
+
+$final = json_decode($response, true);
+
+$output.="<ul>";
+
+foreach($final['Events'] as $Events){
+
+	$output.="<h3>".$Events['name']."</h3>";
+	$output.="<li>".'Date Start: '.$Events['dateStart']."</li>";
+	$output.="<li>".'Date End: '.$Events['dateEnd']."</li>";
+  $output.="<li>".'Location: '.$Events['venue']."</li>";
+	$output.="<li>".'Station: '.$Events['station']."</li>";
+
+  foreach($Events['webcasts'] as $webcasts){
+
+    $output.="<li>".'Webcast (Program View): '.$webcasts."</li>";
+    $output.="<li>".'Webcast (Static View): '.$webcasts."</li>";
+    
+    
+  
+    }
+
+}
+
+$output.="<br>";
+
+$output.="</ul>";
+
+echo $output;
+
 
 ?>
 
