@@ -54,14 +54,14 @@ foreach($final['Events'] as $Events){
 
   foreach($Events['webcasts'] as $webcasts){
 
-    $output.="<li>".'Webcast: '.$webcasts."</li>";    
+    $output.="<li>".'Webcast: <a href='.$webcasts."' > Here </a> </li>";    
   
     }
     $output.="<br>";
 
 
 $output.="<li>"."View The Qual Schedule: <a href='https://frc-queue.wuffs.net/schedule/action.php?code=".$Events['code']."&level=qual' > Here </a> </li>";
-$output.="<li>"."View The Playoff Schedule: https://frc-queue.wuffs.net/schedule/action.php?code=".$Events['code']."&level=playoff"."</li>";
+$output.="<li>"."View The Playoff's Schedule: <a href='https://frc-queue.wuffs.net/schedule/action.php?code=".$Events['code']."&level=playoff' > Here </a> </li>";
 
 $output.="<br>";
 $output.="<br>";
