@@ -46,7 +46,7 @@ $output.="<ul>";
 foreach($final['Events'] as $Events){
 
 	$output.="<h3>".$Events['name']."</h3>";
-  $output.="<h5>"."Event Code: ".$Events['code']."</h3>";
+  $output.="<h5>"."Event Code: ".$Events['code']."</h5>";
   $output.="<li>".'Code Type: '.$Events['type']."</li>";
 	$output.="<li>".'Date Start: '.$Events['dateStart']."</li>";
 	$output.="<li>".'Date End: '.$Events['dateEnd']."</li>";
@@ -58,6 +58,12 @@ foreach($final['Events'] as $Events){
   
     }
     $output.="<br>";
+    $output.="<br>";
+
+
+$output.="<li>"."View The Qual Schedule: https://frc-queue.wuffs.net/schedule/action.php?code=".$Events['code']."&level=qual"."</li>";
+$output.="<li>"."View The Playoff Schedule: https://frc-queue.wuffs.net/schedule/action.php?code=".$Events['code']."&level=playoff"."</li>";
+
 }
 
 $output.="<br>";
