@@ -45,8 +45,11 @@
           <a class="dropdown-item" href="/about">About The Project</a>
         </div>
       </li>
-      <li class="nav-item dropdown mr-auto">
-        <a class="mr-auto nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown">
+        </ul>
+    </div>
+
+    <li class="nav-item dropdown mr-auto">
+        <a class="mr-auto nav-link dropdown-toggle myQueue-toggle" id="navbarDropdown" role="button" data-toggle="dropdown">
           myQueue
         </a>
         <div class="dropdown-menu mr-auto" aria-labelledby="navbarDropdown">
@@ -56,17 +59,22 @@
           <a class="dropdown-item" href="/about">About The Project</a>
         </div>
       </li>
-        </ul>
-    </div>
+
   </div>
 
 
   </nav>
 
 <script>
+
 $(document).ready(function(){
   $(".dropdown-toggle").dropdown("toggle");
 });
+
+$(document).ready(function(){
+  $(".myQueue-toggle").dropdown("toggle");
+});
+
 </script>
 
 
