@@ -20,7 +20,7 @@
 <button id="toggle-to-2" type="button" class="btn btn-primary btn-lg">District</button>
 
 
-<div id="div-1">
+<div id="div1">
 <?php
 
 
@@ -165,7 +165,7 @@ $(document).ready(function(){
 const toggleTo2 = document.getElementById("toggle-to-2");
 const toggleTo1 = document.getElementById("toggle-to-1");
 
-const div1 = document.getElementById("div-1");
+const div1 = document.getElementById("div1");
 const div2 = document.getElementById("div2");
 
 const hide = el => el.style.setProperty("display", "none");
