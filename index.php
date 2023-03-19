@@ -53,6 +53,8 @@ foreach($final['Events'] as $Events){
 	$output.="<li>".'Date Start: '.$Events['dateStart']."</li>";
 	$output.="<li>".'Date End: '.$Events['dateEnd']."</li>";
   $output.="<li>".'Location: '.$Events['venue']."</li>";
+  
+  $output.="<br>";
 
   foreach($Events['webcasts'] as $webcasts){
 
