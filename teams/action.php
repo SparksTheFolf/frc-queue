@@ -16,7 +16,7 @@ $frcCode = getenv('FRCCODE');
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://frc-api.firstinspires.org/v3.0/2023/schedule/'.$code.'?tournamentLevel='.$level.'&teamNumber='.$number,
+  CURLOPT_URL => 'https://frc-api.firstinspires.org/v3.0/2023/schedule/teams?teamNumber='.$number,
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,
@@ -38,20 +38,15 @@ $final = json_decode($response, true);
 
 $output.="<ul>";
 
-foreach($final['Schedule'] as $Schedule){
+foreach($final['teams'] as $teams){
 
-	$output.="<h3>".$Schedule['description']."</h3>";
-	$output.="<h5>".'Start Time: '.$Schedule['startTime']."</h5>";
-
-	foreach($Schedule['teams'] as $teams){
-
-	$output.="<li>".'Teams: '.$teams['teamNumber']."</li>";
-	$output.="<li>".'Station: '.$teams['station']."</li>";
-	
-	
-
-	}
-
+	$output.="<h3>".$teams['teamNumber']."".$teams['nameShort']."</h3>";
+	$output.="<h5>".'Website: '.$teams['website']."<h5>";
+  $output.="<h5>".'Robot Name: '.$teams['robotName']."<h5>";
+	$output.="<li>".'Sponsors: '.$teams['nameFull']."</li>";
+  $output.="<li>".'Home City: '.$teams['city'].", ".$teams['stateProv'].", ".$teams['country']."</li>";
+	$output.="<li>".'Rookie Year: '.$teams['rookieYear']."</li>";
+	$output.="<li>".'Attending School: '.$teams['schoolName']."</li>";
 }
 
 $output.="<br>";
