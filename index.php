@@ -16,6 +16,22 @@
 
 <h2>Week 3</h2>
 
+<div class="btn-group-toggle" data-toggle="buttons">
+  <label class="btn btn-secondary">
+    <input type="checkbox" checked autocomplete="off"> Regional
+  </label>
+</div>
+<div class="btn-group-toggle" data-toggle="buttons">
+  <label class="btn btn-secondary">
+    <input type="checkbox" checked autocomplete="off"> District
+  </label>
+</div>
+<div class="btn-group-toggle" data-toggle="buttons">
+  <label class="btn btn-secondary">
+    <input type="checkbox" checked autocomplete="off"> Championship
+  </label>
+</div>
+
 <?php
 
 

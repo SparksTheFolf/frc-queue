@@ -31,6 +31,9 @@
         <li class="nav-item">
           <a class="nav-link active" href="/schedule">Schedule</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="/schedule">Team Lookup</a>
+        </li>
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown">
           More
