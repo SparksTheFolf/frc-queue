@@ -6,8 +6,17 @@ $number= $_GET['number'];
 $code= $_GET['code'];
 $level= $_GET['level'];
 
-$hi = getenv('$FRCCODE');
-echo $hi;
+$env_array = getenv();
+
+
+foreach ($env_array as $key=>$value)
+
+{
+
+    echo "$key => $value <br />";
+
+}
+
 
 
 $curl = curl_init();
