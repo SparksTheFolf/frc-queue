@@ -18,6 +18,7 @@
 
 <button id="toggle-to-1" type="button" class="btn btn-primary btn-lg">Regional</button>
 <button id="toggle-to-2" type="button" class="btn btn-primary btn-lg">District</button>
+<button id="toggle-to-3" type="button" class="btn btn-primary btn-lg">Championship</button>
 
 
 <div id="div1">
@@ -156,35 +157,108 @@ echo $output;
 
 </div>
 
+<div id="div3">
+
+<?php
+
+$frcCode = getenv('FRCCODE');
+
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://frc-api.firstinspires.org/v3.0/2023/events?weekNumber=3&tournamentType=Championship',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'GET',
+  CURLOPT_HTTPHEADER => array(
+    'If-Modified-Since: ',
+    'Authorization: Basic '.$frcCode
+  ),
+));
+
+$response = curl_exec($curl);
+
+
+$final = json_decode($response, true);
+
+$output.="<ul>";
+
+foreach($final['Events'] as $Events){
+
+	$output.="<h3>".$Events['name']."</h3>";
+  $output.="<h5>"."Event Code: ".$Events['code']."</h5>";
+  $output.="<li>".'Code Type: '.$Events['type']."</li>";
+	$output.="<li>".'Date Start: '.$Events['dateStart']."</li>";
+	$output.="<li>".'Date End: '.$Events['dateEnd']."</li>";
+  $output.="<li>".'Location: '.$Events['venue']."</li>";
+
+  $output.="<br>";
+
+  foreach($Events['webcasts'] as $webcasts){
+
+    $output.="<li>".'Webcast: <a href='.$webcasts." > Here </a> </li>";    
+  
+    }
+    $output.="<br>";
+
+
+$output.="<li>"."View The Qual Schedule: <a href='https://frc-queue.wuffs.net/schedule/action.php?code=".$Events['code']."&level=qual' > Here </a> </li>";
+$output.="<li>"."View The Playoff's Schedule: <a href='https://frc-queue.wuffs.net/schedule/action.php?code=".$Events['code']."&level=playoff' > Here </a> </li>";
+
+$output.="<br>";
+$output.="<br>";
+}
+
+$output.="<br>";
+
+$output.="</ul>";
+
+echo $output;
+
+
+?>
+
 
 <script>
 $(document).ready(function(){
   $(".dropdown-toggle").dropdown("toggle");
 });
 
+const toggleTo3 = document.getElementById("toggle-to-3");
 const toggleTo2 = document.getElementById("toggle-to-2");
 const toggleTo1 = document.getElementById("toggle-to-1");
 
 const div1 = document.getElementById("div1");
 const div2 = document.getElementById("div2");
+const div3 = document.getElementById("div3");
 
 const hide = el => el.style.setProperty("display", "none");
 const show = el => el.style.setProperty("display", "block");
 
-hide(div1);
-hide(div2);
+toggleTo3.addEventListener("click", () => {
+  hide(div1);
+  hide(div2);
+  show(div3);
+});
 
 toggleTo2.addEventListener("click", () => {
   hide(div1);
-  hide(div1);
+  hide(div3);
   show(div2);
 });
 
 toggleTo1.addEventListener("click", () => {
   hide(div2);
-  hide(div2);
+  hide(div3);
   show(div1);
 });
+
+
+
 </script>
 
 
