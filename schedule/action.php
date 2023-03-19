@@ -57,6 +57,8 @@ $output.="</ul>";
 
 echo $output;
 
+echo 'secret' . getenv("$frcCode");
+
 ?>
 
 <br><br>
