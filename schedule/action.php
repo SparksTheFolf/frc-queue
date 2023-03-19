@@ -57,8 +57,8 @@ $output.="</ul>";
 
 echo $output;
 
-$db = $_SERVER('frcCode'); // Gets the database name
-  echo "secret name: $db  \r\n"
+$db = $_ENV('frcCode'); // Gets the database name
+echo "secret name: $db  \r\n"
 
 ?>
 
