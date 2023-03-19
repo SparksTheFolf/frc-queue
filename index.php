@@ -11,10 +11,10 @@
 </head>
 <body>
 
-<h2>Week 3</h2>
 
 <?php include 'Header.php'; ?>
 
+<h2>Week 3</h2>
 
 <?php
 
@@ -53,7 +53,7 @@ foreach($final['Events'] as $Events){
 	$output.="<li>".'Date Start: '.$Events['dateStart']."</li>";
 	$output.="<li>".'Date End: '.$Events['dateEnd']."</li>";
   $output.="<li>".'Location: '.$Events['venue']."</li>";
-  
+
   $output.="<br>";
 
   foreach($Events['webcasts'] as $webcasts){
