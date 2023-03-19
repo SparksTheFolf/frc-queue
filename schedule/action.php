@@ -57,7 +57,8 @@ $output.="</ul>";
 
 echo $output;
 
-echo 'secret' . getenv("$frcCode");
+$db = getenv('frcCode'); // Gets the database name
+  echo "secret name: $db  \r\n"
 
 ?>
 
