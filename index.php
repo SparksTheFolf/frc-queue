@@ -99,7 +99,7 @@ $frcCode = getenv('FRCCODE');
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://frc-api.firstinspires.org/v3.0/2023/events?weekNumber=3&tournamentType=DistrictEvent',
+  CURLOPT_URL => 'https://frc-api.firstinspires.org/v3.0/2023/events?&tournamentType=DistrictEvent',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,
@@ -239,21 +239,28 @@ const div3 = document.getElementById("div3");
 const hide = el => el.style.setProperty("display", "none");
 const show = el => el.style.setProperty("display", "block");
 
+hide(div1);
+hide(div2);
+hide(div3);
+
 toggleTo3.addEventListener("click", () => {
   hide(div1);
+  hide(div2);
   hide(div2);
   show(div3);
 });
 
 toggleTo2.addEventListener("click", () => {
   hide(div1);
-  hide(div3);
+  hide(div2);
+  hide(div2);
   show(div2);
 });
 
 toggleTo1.addEventListener("click", () => {
+  hide(div1);
   hide(div2);
-  hide(div3);
+  hide(div2);
   show(div1);
 });
 
