@@ -58,12 +58,13 @@ foreach($final['Events'] as $Events){
   
     }
     $output.="<br>";
-    $output.="<br>";
 
 
-$output.="<li>"."View The Qual Schedule: https://frc-queue.wuffs.net/schedule/action.php?code=".$Events['code']."&level=qual"."</li>";
+$output.="<li>"."View The Qual Schedule: <a href='https://frc-queue.wuffs.net/schedule/action.php?code=".$Events['code']."&level=qual' > Here </a> </li>";
 $output.="<li>"."View The Playoff Schedule: https://frc-queue.wuffs.net/schedule/action.php?code=".$Events['code']."&level=playoff"."</li>";
 
+$output.="<br>";
+$output.="<br>";
 }
 
 $output.="<br>";
