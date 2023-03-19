@@ -6,6 +6,8 @@ $number= $_GET['number'];
 $code= $_GET['code'];
 $level= $_GET['level'];
 
+$hi = $_ENV('FRCCODE');
+echo $hi;
 
 
 $curl = curl_init();
@@ -55,8 +57,6 @@ $output.="</ul>";
 
 echo $output;
 
-#echo out the 'frcCode' value from the linux environment variable
-echo apache_getenv('FRCCODE');
 
 ?>
 
