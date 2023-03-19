@@ -6,7 +6,7 @@ $number= $_GET['number'];
 $code= $_GET['code'];
 $level= $_GET['level'];
 
-$hi = $_ENV('FRCCODE');
+$hi = getenv('$FRCCODE');
 echo $hi;
 
 
