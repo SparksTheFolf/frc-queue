@@ -6,9 +6,7 @@ $number= $_GET['number'];
 $code= $_GET['code'];
 $level= $_GET['level'];
 
-$env_array = getenv("FRCCODE");
-echo $env_array;
-
+$frcCode = getenv('FRCCODE');
 
 $curl = curl_init();
 
@@ -23,7 +21,7 @@ curl_setopt_array($curl, array(
   CURLOPT_CUSTOMREQUEST => 'GET',
   CURLOPT_HTTPHEADER => array(
     'If-Modified-Since: ',
-    'Authorization: Basic bm9sYW50MTA4OjY3REEyNkU4LUVDRDItNDczRi1CREE1LUFBOTA0MTZFNjk4Mg=='
+    'Authorization: Basic '.$frcCode
   ),
 ));
 

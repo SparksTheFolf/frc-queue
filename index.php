@@ -17,7 +17,7 @@
 <?php
 
 
-$frcCode = getenv('HTTP_frcBASIC');
+$frcCode = getenv('FRCCODE');
 
 $curl = curl_init();
 
