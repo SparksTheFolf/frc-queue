@@ -18,8 +18,6 @@
 
 <button id="toggle-to-1" type="button" class="btn btn-primary btn-lg">Regional</button>
 <button id="toggle-to-2" type="button" class="btn btn-primary btn-lg">District</button>
-<button  type="button" class="btn btn-primary btn-lg">Championship</button>
-
 
 
 <div id="div-1">
@@ -173,20 +171,16 @@ const div2 = document.getElementById("div2");
 const hide = el => el.style.setProperty("display", "none");
 const show = el => el.style.setProperty("display", "block");
 
+hide(div1);
 hide(div2);
-hide(toggleTo1);
 
 toggleTo2.addEventListener("click", () => {
   hide(div1);
-  hide(toggleTo2);
-  show(toggleTo1);
   show(div2);
 });
 
 toggleTo1.addEventListener("click", () => {
   hide(div2);
-  hide(toggleTo1);
-  show(toggleTo2);
   show(div1);
 });
 </script>
