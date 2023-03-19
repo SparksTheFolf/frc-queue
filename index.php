@@ -176,11 +176,15 @@ hide(div2);
 
 toggleTo2.addEventListener("click", () => {
   hide(div1);
+  hide(toggleTo2);
+  show(toggleTo1);
   show(div2);
 });
 
 toggleTo1.addEventListener("click", () => {
   hide(div2);
+  hide(toggleTo1);
+  show(toggleTo2);
   show(div1);
 });
 </script>
