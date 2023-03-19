@@ -16,7 +16,7 @@ $frcCode = getenv('FRCCODE');
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://frc-api.firstinspires.org/v3.0/2023/schedule/teams?teamNumber='.$number,
+  CURLOPT_URL => 'https://frc-api.firstinspires.org/v3.0/2023/teams?teamNumber='.$number,
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,
