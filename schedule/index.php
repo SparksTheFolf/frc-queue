@@ -10,7 +10,7 @@
 <html lang="en">
 <head>
     <title>Generate Schedule</title>
-    <link rel="stylesheet" href="../css/schedule-index.css">
+    <link rel="stylesheet" href="../css/Generate-index.css">
     <link href="../assets/css/bootstrap.css" rel="stylesheet">
   <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
 </head>
@@ -40,8 +40,6 @@
           <input name="number" type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter 4 digit team number">
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
-        <hr />
-
       </form>
 
     </div>

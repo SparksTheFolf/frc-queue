@@ -14,7 +14,32 @@
 
 <?php include 'Header.php'; ?>
 
-<h2>Week 3</h2>
+<?php 
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => 'https://frc-api.firstinspires.org/v3.0/2023',
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'GET',
+  CURLOPT_HTTPHEADER => array(
+    'If-Modified-Since: ',
+    'Authorization: Basic '.$frcCode
+  ),
+));
+
+$response = curl_exec($curl);
+
+
+$final = json_decode($response, true);
+
+
+?>
+
+<h2><?php echo $final['gameName']?>: Week 3</h2>
 
 <button id="toggle-to-1" type="button" class="btn btn-primary btn-lg">Regional</button>
 <button id="toggle-to-2" type="button" class="btn btn-primary btn-lg">District</button>
