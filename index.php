@@ -15,6 +15,7 @@
 <?php include 'Header.php'; ?>
 
 <?php 
+$frcCode = getenv('FRCCODE');
 
 curl_setopt_array($curl, array(
   CURLOPT_URL => 'https://frc-api.firstinspires.org/v3.0/2023',
@@ -26,7 +27,8 @@ curl_setopt_array($curl, array(
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => 'GET',
   CURLOPT_HTTPHEADER => array(
-    'If-Modified-Since: '
+    'If-Modified-Since: ',
+    'Authorization: Basic '.$frcCode
   ),
 ));
 
