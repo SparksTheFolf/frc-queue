@@ -9,32 +9,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>HTML Form</title>
+    <title>Generate Schedule</title>
+    <link rel="stylesheet" href="../css/schedule-index.css">
 </head>
 <body>
 
 <?php include '../Header.php'; ?>
 
-    <form method="" action="action.php">
-  <div class="form-group">
-    <label for="exampleInputEmail1">Event Code</label>
-    <input name="code" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter 4 or 5 char code.">
-  </div>
-  <br>
-  <div class="form-group">
-    <label for="exampleFormControlSelect2">Choose Level</label>
-    <select name="level" multiple class="form-control" id="exampleFormControlSelect2">
+<div class="back">
+  <div class="div-center">
+    <div class="content"> 
+      <h3>Generate Schedule</h3>
+      <hr />
+      <form method="" action="action.php">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Event Code (Required)</label>
+          <input name="code" type="text" class="form-control" id="exampleInputEmail1" placeholder="(4 or 5 char code)" required>
+        </div>
+        <div class="form-group">
+         <label name="level" for="exampleFormControlSelect2">Choose Level (Required)</label>
+    <select name="level" multiple class="form-control" id="exampleFormControlSelect2" required>
       <option>qual</option>
       <option>playoff</option>
     </select>
+        </div>
+                <div class="form-group">
+          <label for="exampleInputEmail1">Team Number</label>
+          <input name="number" type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter 4 digit team number">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <hr />
+
+      </form>
+
+    </div>
+
+
+    </span>
   </div>
-  <br>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Team Number</label>
-    <input name="number" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Team Number.">
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
 
     <script>
 $(document).ready(function(){
