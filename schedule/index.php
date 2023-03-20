@@ -11,6 +11,8 @@
 <head>
     <title>Generate Schedule</title>
     <link rel="stylesheet" href="../css/schedule-index.css">
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+  <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
 </head>
 <body>
 
@@ -53,6 +55,9 @@ $(document).ready(function(){
   $(".dropdown-toggle").dropdown("toggle");
 });
 </script>
+
+<script src="../assets/js/bootstrap-dropdown.js"></script>
+
 
 
 </body>
