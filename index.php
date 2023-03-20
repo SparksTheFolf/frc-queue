@@ -14,36 +14,9 @@
 
 <?php include 'Header.php'; ?>
 
-<?php 
-$frcCode = getenv('FRCCODE');
 
-curl_setopt_array($curl, array(
-  CURLOPT_URL => 'https://frc-api.firstinspires.org/v3.0/2023',
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => '',
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 0,
-  CURLOPT_FOLLOWLOCATION => true,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => 'GET',
-  CURLOPT_HTTPHEADER => array(
-    'If-Modified-Since: ',
-    'Authorization: Basic '.$frcCode
-  ),
-));
+<h2>RAPID REACT℠ presented by The Boeing Company: Week 3</h2>
 
-$baseResponse = curl_exec($curl);
-
-
-$finalResponse = json_decode($baseResponse, true);
-
-
-
-$gameNameOuput.="<h2>".$finalResponse['gameName'].": Week 3</h2>";
-
-echo $gameNameOuput;
-
-?>
 
 <button id="toggle-to-1" type="button" class="btn btn-primary btn-lg">Regional</button>
 <button id="toggle-to-2" type="button" class="btn btn-primary btn-lg">District</button>
