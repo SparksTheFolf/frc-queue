@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light justify-content-center mx-auto">
+<nav class="navbar navbar-expand-lg navbar-light justify-content-center mx-auto justify-content-center">
   <div class="container-fluid mx-auto">
     <a class="navbar-brand" href="/">FRC Queue</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
