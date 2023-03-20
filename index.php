@@ -38,12 +38,10 @@ $baseResponse = curl_exec($curl);
 $finalResponse = json_decode($baseResponse, true);
 
 
-foreach($finalResonse as $name){
 
-	$output.="<h2>".$name['gameName'].": Week 3</h2>";
+$gameNameOuput.="<h2>".$finalResponse['gameName'].": Week 3</h2>";
 
-}
-
+echo $gameNameOuput;
 
 ?>
 

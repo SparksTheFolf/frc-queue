@@ -32,7 +32,7 @@
           <a class="nav-link active" href="/schedule">Schedule</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="/schedule">Team Lookup</a>
+          <a class="nav-link active" href="/teams">Team Lookup</a>
         </li>
         <li class="nav-item dropdown">
         <li class="nav-item dropdown">
