@@ -23,6 +23,9 @@
           <a class="nav-link disabled" href="/queue"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAUpJREFUSEvVlMExBEEYhb+NgAtXRIAIEIHNABHg4oqrExEQAhGsDJABVy5EQH1V/W+N3pnpLjt70FVdXTM9+97r9972iAWP0YLxmZfgELhKIs+Au1zwvATvwEoC/QBW/x3BYBZdAzvAJ/AIPAMvwGupJDUZqPK2A0iyvT6SGgJVrgGXSfkFsNkA9b3vWkeJINS/AetpPgHLGdo47e2mdTv2SwT2+gA4Sh2/B/Yb4A/Zc2xtRD4lAn+gKr12nWTgKrcAWwnQ75zT8GsIAjOy8PmrAdpbpFoCQzxvIFlXlRfrWkNguBGsypdaJEt22naUGoII1kCjLXruNBdXSW2OJ/o1SgQRbJ/nqj8GboCTEsF3R2J9fyZPoIWWwHr2nqCNoFVZhhMNm7GpZFHpLov9TpuGIgiboghTYUMRCGidZ67vIQn+dJvWZtD53Q88YEQZKpiw4wAAAABJRU5ErkJggg=="/> Queuing</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link active" href="/teams"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAURJREFUSEvVlf8xxUAURs+rgA5QASpABXTgqYAOUAEqQAV0gAoeHShBB8yZuZtJYrObmMlg/8nk7Y9zv2+/m7dg5rGY+Xz+NOACuAPeSy7UFJwBh8A+8Aw8AjfAEfAAfABb8cxySoBr4DSzS4DVC9wG7oHlkIohwA6wKkjfDWu0Zy1UZK0aAmjNVQFwEv6rYg84CEXftvwaYIxFr2HTBqBlvo9W4MLSJWuhF30OvAEWNDlFbvAgI6nPLxFTwabmNk40qsJM1yQFpf7ZjN6wAKPqsOm8/M4YumQrtAdy0vVaFebfoUIPN66XoaaB9AHrwFPJ01Z5goynFqXOdtrObnqiD3BTklyyKM253gQli477KtqAWnMNAVPTJRVtaOdzPbX6nIrP+LEpvK0gTY6xZmxYOgpmB/yk8uqe2h9O9YDagv8P+AJ6Qj8ZCm3B9gAAAABJRU5ErkJggg=="/> Team Lookup</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link active" href="/alliance"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAVVJREFUSEvFlf0xBEEQR99FgAxkgAgQgRAQgggIQQbIQAbIQAaI4IiAemrnarZvPnavXOl/9m5m5/e6e7p7F2zZFlvWZw7gArgeHLoBHqY4NwWQhPeD4DvQBbUAUfhjELybAyoBasL3g/B3JTXFiCLgFTgYBJLHSTjp1gBpX42j9CcC0uFLIApPBfjeSrcGaN1NL4L/BTwDx8Ap4O+S9SJ4AU5qd2Dez4Er4HZDgA1oJf5azLUbsc4jp3Y/j8AZMCqQ+PIusOyMgBLALn8bzu0Bn7UIXE+e1DglgCPDOTVKTylFrnlBT40oIiD3fq04evkscfIzplRnDkve1yJw3YPOlp0CIQeksv4CjGSV+9YdpD29UiBCBChmtZlOxX06g9as9z0oQewRL9Qom+KtFOWe6K0NaIfnZsfaN6ayar0I8oOKWY6az9q0HcHmAFqO/kkEGwF+ACPjRBlyBB7HAAAAAElFTkSuQmCC"/> Alliances</a>
         </li>
         <li class="nav-item">
@@ -31,13 +34,10 @@
         <li class="nav-item">
           <a class="nav-link active" href="/schedule"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAK1JREFUSEtjZKAxYKSx+QyELPgPdQAudYTk6W+BAwMDw3wGBgYFMoPuAQMDQyIDA8MBmH50r4MUyJNpOEwbyAxFXBbAwpRCOxBBj+4DullAKHXh8iFGqsLlg+FjAbqXSeVjZDRSDSCknqAFpCbXwRfJhIKAkDzBICJkACF5ghYM/Tigug8+MDAw8JNqKpr6h8j1CXqZA6pwFlBQJ4AMT8BX4VDoeEzt5JaaRDsEAEtJNBmkfiBdAAAAAElFTkSuQmCC"/> Schedule</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="/teams"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAURJREFUSEvVlf8xxUAURs+rgA5QASpABXTgqYAOUAEqQAV0gAoeHShBB8yZuZtJYrObmMlg/8nk7Y9zv2+/m7dg5rGY+Xz+NOACuAPeSy7UFJwBh8A+8Aw8AjfAEfAAfABb8cxySoBr4DSzS4DVC9wG7oHlkIohwA6wKkjfDWu0Zy1UZK0aAmjNVQFwEv6rYg84CEXftvwaYIxFr2HTBqBlvo9W4MLSJWuhF30OvAEWNDlFbvAgI6nPLxFTwabmNk40qsJM1yQFpf7ZjN6wAKPqsOm8/M4YumQrtAdy0vVaFebfoUIPN66XoaaB9AHrwFPJ01Z5goynFqXOdtrObnqiD3BTklyyKM253gQli477KtqAWnMNAVPTJRVtaOdzPbX6nIrP+LEpvK0gTY6xZmxYOgpmB/yk8uqe2h9O9YDagv8P+AJ6Qj8ZCm3B9gAAAABJRU5ErkJggg=="/> Team Lookup</a>
-        </li>
         <li class="nav-item dropdown">
         <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown">
-          myQueue
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAPRJREFUSEvNlWENwjAQhb8pAAmgAJCAA3AACpAAKCAoQAJIQAIOQAIogLxkDdC1vWVlZPfnsqx53/Xd7lbQchQt61MXMAbWgLLiAmzLnKyxDmAGHCMqc+CUIliAPnAFlENxB4aAcjAsQKp6JzgFzk0Bm9L7lAvqhc518wby/gb0IgU+gEFOD6Tb6lfkCtf3L58/50DPmofsObA0ugtQg1dlD5w1frWySJO8jzU6NmgLYJeYYB+kSV6G1kYIIPFDQ+Mru8kHWLvH4lZ2kw+osxosyNfq8AFq2shSMN5LY+LO+IBnpnhF9++AH13gLWP9cLKBrQNeWrEoGRxI2IoAAAAASUVORK5CYII="/> myQueue
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="/support">Support</a>
