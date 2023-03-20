@@ -15,7 +15,7 @@
 <div class="back">
   <div class="div-center">
     <div class="content"> 
-      <h3>Team Lookup</h3>
+      <h3>Alliance Lookup</h3>
       <hr />
       <form method="" action="action.php">
                 <div class="form-group">
