@@ -15,7 +15,11 @@
 <?php include 'Header.php'; ?>
 
 
-<h2>RAPID REACT℠ presented by The Boeing Company: Week 3</h2>
+<h2>RAPID REACT℠ presented by The Boeing Company: Week 3</h2> 
+
+<div class="alert alert-warning" role="alert">
+This version of FRC Queue is in dev still! Please report any bugs to sparks@wiffs.net
+</div>
 
 
 <button id="toggle-to-1" type="button" class="btn btn-primary btn-lg">Regional</button>
