@@ -76,7 +76,7 @@ foreach($final['Schedule'] as $Schedule){
 
   $output.="<tr>";
 
-	$output.="<td class='tg-0lax'><a href='/matchResults/action.php?code='.$code.'&level='.$level.'&match=".$Schedule['matchNumber']."'>".$Schedule['description']."</td>";
+	$output.="<td class='tg-0lax'><a href='/matchResults/action.php?code=".$code."&level=".$level."&match=".$Schedule['matchNumber']."'>".$Schedule['description']."</a></td>";
 	$output.="<td class='tg-0lax'>".$Schedule['startTime']."</td>";
 
 	foreach($Schedule['teams'] as $teams){
