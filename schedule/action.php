@@ -140,7 +140,6 @@ foreach($finalScores['MatchScores'] as $Scores){
   foreach($Scores['alliances'] as $alliances){
 
       $output.="<td class='tg-0lax'>".$alliances['totalPoints']."</td>";
-      $output.="<td class='tg-0lax'>".$alliances['totalPoints']."</td>";
 
     
   }
