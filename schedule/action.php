@@ -46,8 +46,35 @@ curl_close($curl);
 
 $final = json_decode($response, true);
 
+foreach($final['Schedule'] as $Schedule){
+
+  $schedule = $Schedule['matchNumber'];
+
+}
 
 
+
+
+$scores = curl_init();
+
+curl_setopt_array($scores, array(
+  CURLOPT_URL => 'https://frc-api.firstinspires.org/v3.0/2023/scores/'.$code.'/'.$level.'?matchNumber='.$schedule,
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'GET',
+  CURLOPT_HTTPHEADER => array(
+    'If-Modified-Since: ',
+    'Authorization: Basic '.$frcCode
+  ),
+));
+
+$scoresResponse = curl_exec($scores);
+curl_close($scores);
+$finalScores = json_decode($scoresResponse, true);
 
 
 ?>
@@ -119,30 +146,6 @@ foreach($final['Schedule'] as $Schedule){
 
 
   }
-
-
-
-
-$scores = curl_init();
-
-curl_setopt_array($scores, array(
-  CURLOPT_URL => 'https://frc-api.firstinspires.org/v3.0/2023/scores/'.$code.'/'.$level.'?matchNumber='.$Schedule['matchNumber'],
-  CURLOPT_RETURNTRANSFER => true,
-  CURLOPT_ENCODING => '',
-  CURLOPT_MAXREDIRS => 10,
-  CURLOPT_TIMEOUT => 0,
-  CURLOPT_FOLLOWLOCATION => true,
-  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-  CURLOPT_CUSTOMREQUEST => 'GET',
-  CURLOPT_HTTPHEADER => array(
-    'If-Modified-Since: ',
-    'Authorization: Basic '.$frcCode
-  ),
-));
-
-$scoresResponse = curl_exec($scores);
-curl_close($scores);
-$finalScores = json_decode($scoresResponse, true);
 
 foreach($finalScores['MatchScores'] as $Scores){
 
