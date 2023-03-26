@@ -81,8 +81,8 @@ foreach($final['Schedule'] as $Schedule){
 
 	foreach($Schedule['teams'] as $teams){
 
-    $output.="<td class='tg-0lax'>".$teams['teamNumber'][1]."</td>";
-    $output.="<td class='tg-0lax'>".$teams['teamNumber'][2]."</td>";
+    $output.="<td class='tg-0lax'>".$teams[1]["teamNumber"]."</td>";
+    $output.="<td class='tg-0lax'>".$teams[2]["teamNumber"]."</td>";
 
 
 	}
