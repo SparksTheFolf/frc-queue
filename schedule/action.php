@@ -80,7 +80,7 @@ foreach($final['Matches'] as $Schedule){
 
 	$output.="<td class='tg-0lax'><a href='/matchResults/action.php?code=".$code."&level=".$level."&match=".$Schedule['matchNumber']."'>".$Schedule['description']."</a></td>";
 
-  if($Schedule['matchVideoLink'] == 'null'){
+  if($Schedule['matchVideoLink'] == null || $Schedule['matchVideoLink'] == 'null'){
     $output.="<td class='tg-0lax'></td>";
   }
   else{
