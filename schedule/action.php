@@ -124,12 +124,19 @@ foreach($final['Schedule'] as $Schedule){
 
   }
 
-  foreach($finalScores['Scores'] as $Scores){
+  foreach($finalScores['MatchScores'] as $Scores){
 
-    if($Scores['matchNumber'] == $Schedule['matchNumber']){
-      $output.="<td class='tg-0lax'>".$Scores['redScore']."</td>";
-      $output.="<td class='tg-0lax'>".$Scores['blueScore']."</td>";
+    foreach($Scores['alliances'] as $alliances){
+
+      if($alliances['alliance'] == "Red"){
+        $output.="<td class='tg-0lax'>".$alliance['totalPoints']."</td>";
+      }
+      if($alliances['alliance'] == "Blue"){
+        $output.="<td class='tg-0lax'>".$alliance['totalPoints']."</td>";
+      }
     }
+
+
 
   }
 
