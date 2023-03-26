@@ -95,7 +95,7 @@ foreach($final['Matches'] as $Schedule){
       $output .= "<a href='/teams/action.php?number=".$teams['teamNumber']."'>".$teams['teamNumber']."</a>";
     }
     $output .= "</td>";
-}
+
 
   
 
@@ -105,6 +105,7 @@ foreach($final['Matches'] as $Schedule){
   $output.="<td class='tg-0lax'>".$Schedule['scoreBlueFinal']."</td>";
 
 }
+
 
 
 $output.="</tr>";
