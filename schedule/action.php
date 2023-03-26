@@ -143,6 +143,10 @@ foreach($finalScores['MatchScores'] as $Scores){
         $output.="<td class='tg-0lax'>".$alliances['totalPoints']."</td>";
       }
 
+      if($alliances['alliance'] == "Blue"){
+        $output.="<td class='tg-0lax'>".$alliances['totalPoints']."</td>";
+      }
+
     
   }
 
