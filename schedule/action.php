@@ -85,27 +85,48 @@ foreach($final['Matches'] as $Schedule){
 	foreach($Schedule['teams'] as $teams){
 
     if($teams['station'] == "Red1"){
+      if($teams['teamNumber'] == 0){
+        $output.="<td class='tg-0lax'></td>";
+      }
+      else{
       $output.="<td class='tg-0lax'><a href='/teams/action.php?number=".$teams['teamNumber']."'>".$teams['teamNumber']."</a></td>";
-    }
+    }      }
     if($teams['station'] == "Red2"){
+      if($teams['teamNumber'] == 0){
+        $output.="<td class='tg-0lax'></td>";
+      }
+      else{
       $output.="<td class='tg-0lax'><a href='/teams/action.php?number=".$teams['teamNumber']."'>".$teams['teamNumber']."</a></td>";
-    }
+    }      }
     if($teams['station'] == "Red3"){
+      if($teams['teamNumber'] == 0){
+        $output.="<td class='tg-0lax'></td>";
+      }
+      else{
       $output.="<td class='tg-0lax'><a href='/teams/action.php?number=".$teams['teamNumber']."'>".$teams['teamNumber']."</a></td>";
-    }
+    }      }
     if($teams['station'] == "Blue1"){
+      if($teams['teamNumber'] == 0){
+        $output.="<td class='tg-0lax'></td>";
+      }
+      else{
       $output.="<td class='tg-0lax'><a href='/teams/action.php?number=".$teams['teamNumber']."'>".$teams['teamNumber']."</a></td>";
-    }
+    }      }
     if($teams['station'] == "Blue2"){
+      if($teams['teamNumber'] == 0){
+        $output.="<td class='tg-0lax'></td>";
+      }
+      else{
       $output.="<td class='tg-0lax'><a href='/teams/action.php?number=".$teams['teamNumber']."'>".$teams['teamNumber']."</a></td>";
-    }
+    }      }
     if($teams['station'] == "Blue3"){
+      if($teams['teamNumber'] == 0){
+        $output.="<td class='tg-0lax'></td>";
+      }
+      else{
       $output.="<td class='tg-0lax'><a href='/teams/action.php?number=".$teams['teamNumber']."'>".$teams['teamNumber']."</a></td>";
-    }
-
-    if($teams['teamNumber'] == 0){
-       $output.="<td class='tg-0lax'></td>";
-     }
+    }     
+  }
 
   
 
