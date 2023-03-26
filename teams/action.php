@@ -40,7 +40,7 @@ $output.="<ul>";
 
 foreach($final['teams'] as $teams){
 
-	$output.="<h3>".$teams['teamNumber']."".$teams['nameShort']."</h3>";
+	$output.="<h3>".$teams['teamNumber']." ".$teams['nameShort']."</h3>";
 	$output.="<h5>".'Website: '.$teams['website']."<h5>";
   $output.="<h5>".'Robot Name: '.$teams['robotName']."<h5>";
 	$output.="<li>".'Sponsors: '.$teams['nameFull']."</li>";
