@@ -105,6 +105,8 @@ foreach($final['Matches'] as $Schedule){
   $output.="<td class='tg-0lax'>".$Schedule['scoreRedFinal']."</td>";
   $output.="<td class='tg-0lax'>".$Schedule['scoreBlueFinal']."</td>";
 
+}
+
 
 $output.="</tr>";
 $output.="<br>";
