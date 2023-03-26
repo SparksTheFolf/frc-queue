@@ -58,7 +58,7 @@ foreach($final['Schedule'] as $Schedule){
 $scores = curl_init();
 
 curl_setopt_array($scores, array(
-  CURLOPT_URL => 'https://frc-api.firstinspires.org/v3.0/2023/scores/'.$code.'/'.$level.'?matchNumber='.$schedule,
+  CURLOPT_URL => 'https://frc-api.firstinspires.org/v3.0/2023/scores/'.$code.'/'.$level.'?matchNumber=1',
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => '',
   CURLOPT_MAXREDIRS => 10,
