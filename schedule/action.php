@@ -79,7 +79,14 @@ foreach($final['Matches'] as $Schedule){
   $output.="<tr>";
 
 	$output.="<td class='tg-0lax'><a href='/matchResults/action.php?code=".$code."&level=".$level."&match=".$Schedule['matchNumber']."'>".$Schedule['description']."</a></td>";
-  $output.="<td class='tg-0lax'><a href='".$Schedule['matchVideoLink']."'>Match ".$Schedule['matchNumber']." Video</a></td>";
+
+  if($Schedule['matchVideoLink'] == 'null'){
+    $output.="<td class='tg-0lax'></td>";
+  }
+  else{
+    $output.="<td class='tg-0lax'><a href='".$Schedule['matchVideoLink']."'>Match ".$Schedule['matchNumber']." Video</a></td>";
+  }
+
 	$output.="<td class='tg-0lax'>".$Schedule['actualStartTime']."</td>";
 
 	foreach($Schedule['teams'] as $teams){
