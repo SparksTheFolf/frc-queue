@@ -46,7 +46,29 @@ curl_close($curl);
 
 $final = json_decode($response, true);
 
-$output.="<ul>";
+
+$scores = curl_init();
+
+curl_setopt_array($scores, array(
+  CURLOPT_URL => 'https://frc-api.firstinspires.org/v3.0/2023/scores/'.$code.'/'.$level.'?matchNumber='.$final['Schedule']['matchNumber'],
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => '',
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 0,
+  CURLOPT_FOLLOWLOCATION => true,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => 'GET',
+  CURLOPT_HTTPHEADER => array(
+    'If-Modified-Since: ',
+    'Authorization: Basic '.$frcCode
+  ),
+));
+
+$scoresResponse = curl_exec($scores);
+curl_close($scores);
+$finalScores = json_decode($scoresResponse, true);
+
+
 
 ?>
 
@@ -102,19 +124,15 @@ foreach($final['Schedule'] as $Schedule){
 
   }
 
-  if($Schedule['redScore'] == null){
-    $output.="<td class='tg-0lax'>0</td>";
-  }else{
-    $output.="<td class='tg-0lax'>".$Schedule['redScore']."</td>";
+  foreach($finalScores['Scores'] as $Scores){
+
+    if($Scores['matchNumber'] == $Schedule['matchNumber']){
+      $output.="<td class='tg-0lax'>".$Scores['redScore']."</td>";
+      $output.="<td class='tg-0lax'>".$Scores['blueScore']."</td>";
+    }
+
   }
 
-  if($Schedule['blueScore'] == null){
-    $output.="<td class='tg-0lax'>0</td>";
-  }else{
-    $output.="<td class='tg-0lax'>".$Schedule['blueScore']."</td>";
-
-
-	}
 
   $output.="</tr>";
 
