@@ -81,8 +81,37 @@ foreach($final['Schedule'] as $Schedule){
 
 	foreach($Schedule['teams'] as $teams){
 
-    $output.="<td class='tg-0lax'>".$teams[1]["teamNumber"]."</td>";
-    $output.="<td class='tg-0lax'>".$teams[2]["teamNumber"]."</td>";
+    if($teams['station'] == "Red1"){
+      $output.="<td class='tg-0lax'>".$teams['teamNumber']."</td>";
+    }
+    if($teams['station'] == "Red2"){
+      $output.="<td class='tg-0lax'>".$teams['teamNumber']."</td>";
+    }
+    if($teams['station'] == "Red3"){
+      $output.="<td class='tg-0lax'>".$teams['teamNumber']."</td>";
+    }
+    if($teams['station'] == "Blue1"){
+      $output.="<td class='tg-0lax'>".$teams['teamNumber']."</td>";
+    }
+    if($teams['station'] == "Blue2"){
+      $output.="<td class='tg-0lax'>".$teams['teamNumber']."</td>";
+    }
+    if($teams['station'] == "Blue3"){
+      $output.="<td class='tg-0lax'>".$teams['teamNumber']."</td>";
+    }
+
+  }
+
+  if($Schedule['redScore'] == null){
+    $output.="<td class='tg-0lax'>0</td>";
+  }else{
+    $output.="<td class='tg-0lax'>".$Schedule['redScore']."</td>";
+  }
+
+  if($Schedule['blueScore'] == null){
+    $output.="<td class='tg-0lax'>0</td>";
+  }else{
+    $output.="<td class='tg-0lax'>".$Schedule['blueScore']."</td>";
 
 
 	}
