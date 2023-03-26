@@ -53,6 +53,7 @@ $final = json_decode($response, true);
 <thead>
   <tr>
     <th class="tg-0pky">Match</th>
+    <th class="tg-0lax">Video Link</th>
     <th class="tg-0lax">Start Time</th>
     <th class="tg-0lax">Red 1</th>
     <th class="tg-0lax">Red 2</th>
@@ -76,7 +77,8 @@ foreach($final['Matches'] as $Schedule){
   $output.="<tr>";
 
 	$output.="<td class='tg-0lax'><a href='/matchResults/action.php?code=".$code."&level=".$level."&match=".$Schedule['matchNumber']."'>".$Schedule['description']."</a></td>";
-	$output.="<td class='tg-0lax'>".$Schedule['startTime']."</td>";
+  $output.="<td class='tg-0lax'><a href='".$Schedule['matchVideoLink']."'> Qual ".$Schedule['matchNumber']." Video</a></td>";
+	$output.="<td class='tg-0lax'>".$Schedule['actualStartTime']."</td>";
 
 	foreach($Schedule['teams'] as $teams){
 
