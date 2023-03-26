@@ -33,19 +33,47 @@ $final = json_decode($response, true);
 
 $output.="<ul>";
 
+?>
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky">Match</th>
+    <th class="tg-0lax">Start Time</th>
+    <th class="tg-0lax">Red 1</th>
+    <th class="tg-0lax">Red 2</th>
+    <th class="tg-0lax">Red 3</th>
+    <th class="tg-0lax">Blue 1</th>
+    <th class="tg-0lax">Blue 2</th>
+    <th class="tg-0lax">Blue 3</th>
+    <th class="tg-0lax">Red Final</th>
+    <th class="tg-0lax">Blue Final</th>
+  </tr>
+</thead>
+
+
+<tbody>
+
+<?php
+
+
 foreach($final['Schedule'] as $Schedule){
 
-	$output.="<h3>".$Schedule['description']."</h3>";
-	$output.="<h5>".'Start Time: '.$Schedule['startTime']."</h5>";
+  $output.="<tr>";
+
+	$output.="<td class='tg-0lax'>".$Schedule['description']."</td>";
+	$output.="<td class='tg-0lax'>".$Schedule['startTime']."</td>";
 
 	foreach($Schedule['teams'] as $teams){
 
-	$output.="<li>".'Teams: '.$teams['teamNumber']."</li>";
-	$output.="<li>".'Station: '.$teams['station']."</li>";
-	
-	
+    $output.="<td class='tg-0lax'>".$teams['teamNumber'][1]."</td>";
+    $output.="<td class='tg-0lax'>".$teams['teamNumber'][2]."</td>";
+
 
 	}
+
+  $output.="</tr>";
+
 
 }
 
@@ -57,6 +85,9 @@ echo $output;
 
 
 ?>
+
+</tbody>
+</table>
 
 <br><br>
 
