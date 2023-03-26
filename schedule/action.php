@@ -10,6 +10,8 @@
 .tg .tg-0lax{text-align:left;vertical-align:top}
 </style>
 
+<title>Match Schedule</title>
+
 </head>
 <body>
 
@@ -100,6 +102,11 @@ foreach($final['Matches'] as $Schedule){
     if($teams['station'] == "Blue3"){
       $output.="<td class='tg-0lax'><a href='/teams/action.php?number=".$teams['teamNumber']."'>".$teams['teamNumber']."</a></td>";
     }
+
+    if($teams['teamNumber'] == 0){
+       $output.="<td class='tg-0lax'></td>";
+     }
+
   
 
   }
