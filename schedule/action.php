@@ -8,6 +8,8 @@
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
 .tg .tg-0lax{text-align:left;vertical-align:top}
+.background: linear-gradient(328deg, #CE2929 0%, #2577DA 100%);
+
 </style>
 
 <title>Match Schedule</title>
