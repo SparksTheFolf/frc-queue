@@ -1,7 +1,7 @@
 <html>
 <head>
 
-<link rel="stylesheet" href="css/Generate-Action.css">
+<link rel="stylesheet" href="/css/Generate-Action.css">
 
 
 <title>Match Schedule</title>
