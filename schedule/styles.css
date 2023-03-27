@@ -1,12 +1,13 @@
-.mainDiv {
-    background-color: grey;
-}
+body {
+    background-color: rgb(20,30, 1);
+ }
   .tg  {
       border-collapse:collapse;
       border-spacing:0; 
       margin-left: auto;
       margin-right: auto;
       border: 14px outset #ff6550;
+      background-color: white;
   }
   .tg td{
       border-color:black;
