@@ -3,7 +3,7 @@
 <html>
 <head>
 
-<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" href="styles.css" />
 
 <title>Match Schedule</title>
 
