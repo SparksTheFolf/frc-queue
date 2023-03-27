@@ -44,6 +44,8 @@ $final = json_decode($response, true);
 
 ?>
 
+<div class="mainDiv">
+
 <div class="mainTable">
 
 <table class="tg">
@@ -118,6 +120,7 @@ echo $output;
 
 </div>
 
+
 <br><br>
 
 <a href="/schedule" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Go Back</a>
@@ -130,6 +133,6 @@ $(document).ready(function(){
 </script>
 
 
-
+</div>
 </body>
 </html>
