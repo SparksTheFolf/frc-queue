@@ -45,7 +45,7 @@ $final = json_decode($response, true);
 
 ?>
 
-<div class=mainTable>
+<div class="mainTable">
 
 <table class="tg">
 <thead>
