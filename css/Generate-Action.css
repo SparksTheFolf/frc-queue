@@ -5,3 +5,10 @@
   font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
 .tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
 .tg .tg-0lax{text-align:left;vertical-align:top}
+
+.mainTable{
+    width: 100%;
+    border: 1px solid #000;
+    border-collapse: collapse;
+    box-shadow: 6px 9px 15px -4px rgba(128, 0, 0, 1);
+}

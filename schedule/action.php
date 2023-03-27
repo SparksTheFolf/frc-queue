@@ -45,6 +45,8 @@ $final = json_decode($response, true);
 
 ?>
 
+<div class=mainTable>
+
 <table class="tg">
 <thead>
   <tr>
@@ -114,6 +116,8 @@ echo $output;
 
 </tbody>
 </table>
+
+</div>
 
 <br><br>
 
