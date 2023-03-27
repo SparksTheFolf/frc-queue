@@ -12,8 +12,6 @@
 
 <?php 
 
-//include '../Header.php'; 
-
 $number= $_GET['number'];
 $code= $_GET['code'];
 $level= $_GET['level'];
