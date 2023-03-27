@@ -1,3 +1,5 @@
+<?php include '../Header.php'; ?>
+
 <html>
 <head>
 
@@ -10,7 +12,7 @@
 
 <?php 
 
-include '../Header.php'; 
+//include '../Header.php'; 
 
 $number= $_GET['number'];
 $code= $_GET['code'];
