@@ -29,25 +29,80 @@ curl_close($curl);
 
 $final = json_decode($response, true);
 
+?>
+
+
+
+<div class="mainDiv">
+
+<div class="mainTable">
+
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0lax">Alliance 1</th>
+    <th class="tg-0lax">Alliance 2</th>
+    <th class="tg-0lax">Alliance 3</th>
+    <th class="tg-0lax">Alliance 4</th>
+    <th class="tg-0lax">Alliance 5</th>
+    <th class="tg-0lax">Alliance 6</th>
+    <th class="tg-0lax">Alliance 7</th>
+    <th class="tg-0lax">Alliance 8</th>
+  </tr>
+</thead>
+
+
+<tbody>
+
+<?php
+
 $output.="<ul>";
 
 foreach($final['Alliances'] as $Alliances){
 
-	$output.="<h3>".$Alliances['name']."</h3>";
+  $output.="<tr>";
 
+  # Iterate thru each alliance and print out the team numbers with the team captain in bold and on top and each next two teams in order below
 
-	$output.="<li>".'Captian: '.$Alliances['captain']."</li>";
-	$output.="<li>".'Team 2: '.$Alliances['round1']."</li>";
-  $output.="<li>".'Team 3: '.$Alliances['round2']."</li>";
-	
-	$output.="<br>";
-
-
+  if($Alliances['number'] == 1){
+    $output.="<td class='tg-0lax'>".$Alliances['captian']."</td>";
+    $output.="<td class='tg-0lax'>".$Alliances['round1']."</td>";
+    $output.="<td class='tg-0lax'>".$Alliances['round2']."</td>";
+  }
+  if($Alliances['number'] == 2){
+    $output.="<td class='tg-0lax'>".$Alliances['captian']."</td>";
+    $output.="<td class='tg-0lax'>".$Alliances['round1']."</td>";
+    $output.="<td class='tg-0lax'>".$Alliances['round2']."</td>";
+  }  if($Alliances['number'] == 3){
+    $output.="<td class='tg-0lax'>".$Alliances['captian']."</td>";
+    $output.="<td class='tg-0lax'>".$Alliances['round1']."</td>";
+    $output.="<td class='tg-0lax'>".$Alliances['round2']."</td>";
+  }  if($Alliances['number'] == 4){
+    $output.="<td class='tg-0lax'>".$Alliances['captian']."</td>";
+    $output.="<td class='tg-0lax'>".$Alliances['round1']."</td>";
+    $output.="<td class='tg-0lax'>".$Alliances['round2']."</td>";
+  }  if($Alliances['number'] == 5){
+    $output.="<td class='tg-0lax'>".$Alliances['captian']."</td>";
+    $output.="<td class='tg-0lax'>".$Alliances['round1']."</td>";
+    $output.="<td class='tg-0lax'>".$Alliances['round2']."</td>";
+  }  if($Alliances['number'] == 6){
+    $output.="<td class='tg-0lax'>".$Alliances['captian']."</td>";
+    $output.="<td class='tg-0lax'>".$Alliances['round1']."</td>";
+    $output.="<td class='tg-0lax'>".$Alliances['round2']."</td>";
+  }
+  if($Alliances['number'] == 7){
+    $output.="<td class='tg-0lax'>".$Alliances['captian']."</td>";
+    $output.="<td class='tg-0lax'>".$Alliances['round1']."</td>";
+    $output.="<td class='tg-0lax'>".$Alliances['round2']."</td>";
+  }
+  if($Alliances['number'] == 8){
+    $output.="<td class='tg-0lax'>".$Alliances['captian']."</td>";
+    $output.="<td class='tg-0lax'>".$Alliances['round1']."</td>";
+    $output.="<td class='tg-0lax'>".$Alliances['round2']."</td>";
+  }
 }
 
-$output.="<br>";
 
-$output.="</ul>";
 
 echo $output;
 
