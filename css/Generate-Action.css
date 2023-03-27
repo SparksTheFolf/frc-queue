@@ -1,18 +1,6 @@
 body {
-    background-image: linear-gradient(45deg, rgba(210, 65, 65, 1) 0%, rgba(24, 180, 247, 1) 100%);
-    font-family: "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.42857143;
-    margin: 0;
-}
-
-.mainTable{
-    border: 1px solid #000;
-    border-collapse: collapse;
-    box-shadow: 6px 9px 15px -4px rgba(128, 0, 0, 1);
-    margin-left: auto;
-    margin-right: auto;
-}
+    background-color: lightblue;
+  }
 
 .tg  {
     border-collapse:collapse;
